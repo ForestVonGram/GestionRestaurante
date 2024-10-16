@@ -2,6 +2,7 @@ package org.uniquindio.gestioninformacionrestaurante.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -9,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
+import org.uniquindio.gestioninformacionrestaurante.modelo.Cliente;
+import org.uniquindio.gestioninformacionrestaurante.modelo.Producto;
 
 public class ConfirmarPedidoController {
 
@@ -37,8 +40,14 @@ public class ConfirmarPedidoController {
         listaProductos.setText(productos);
     }
 
-    private void crearPedidoFinal(ActionEvent event) {
+    private void mostrarPedido(Cliente cliente, List<Producto> productosActuales) {
+        setDatosCliente(cliente.getNombre());
 
+        StringBuilder productosTxt = new StringBuilder();
+        for (Producto producto : productosActuales) {
+            productosTxt.append(producto.toString()).append("\n");
+        }
+        setListaProductos(productosTxt.toString());
     }
 
     @FXML

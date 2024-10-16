@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -11,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.uniquindio.gestioninformacionrestaurante.modelo.Producto;
 
 public class AddProductoController {
 
@@ -36,6 +39,7 @@ public class AddProductoController {
     private TextField precioProducto;
 
     private SceneController sceneController = new SceneController();
+    private List<Producto> productosActuales = new ArrayList<>();
 
     private void agregarProducto(ActionEvent event) {
         String codigo = codigoProducto.getText();
@@ -46,6 +50,10 @@ public class AddProductoController {
             mostrarAlerta ("Error", "Todos los campos deben ser completados.");
             return;
         }
+
+        Producto producto = new Producto(codigo, nombre, Double.parseDouble(precio));
+        productosActuales.add(producto);
+        limpiarCampos();
 
         String datosProducto = String.join("#", codigo, nombre, precio);
 

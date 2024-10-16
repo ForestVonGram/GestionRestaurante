@@ -4,11 +4,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniquindio.gestioninformacionrestaurante.controller.PedidoCreadoController">
    <children>
-      <Text layoutX="186.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedido creado con éxtio" />
+      <Text layoutX="186.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedido creado con éxito" />
       <Button fx:id="crearOtroPedido_btn" layoutX="65.0" layoutY="187.0" mnemonicParsing="false" text="Crear otro pedido" />
       <Button fx:id="salir_btn" layoutX="322.0" layoutY="187.0" mnemonicParsing="false" text="Salir del programa" />
+      <Text fx:id="rutaPedidoCreado" layoutX="65.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

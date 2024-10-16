@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.uniquindio.gestioninformacionrestaurante.modelo.Cliente;
 
 public class AddClienteController {
 
@@ -48,6 +49,7 @@ public class AddClienteController {
     private Button volver_btn;
 
     private SceneController sceneController = new SceneController();
+    private Cliente clienteActual;
 
     private void agregarCliente(ActionEvent event) {
         String codigo = codigoCliente.getText();
@@ -61,6 +63,8 @@ public class AddClienteController {
             mostrarAlerta("Error.", "Todos los campos deben ser completados.");
             return;
         }
+
+        clienteActual = new Cliente(codigo, Integer.parseInt(cedula), tipoid, nombre, apellido, Integer.parseInt(telefono));
 
         String datosCliente = String.join("@", codigo, cedula, tipoid, nombre, apellido, telefono);
 
