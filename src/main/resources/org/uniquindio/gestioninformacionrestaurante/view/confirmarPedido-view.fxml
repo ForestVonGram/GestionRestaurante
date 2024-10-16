@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniquindio.gestioninformacionrestaurante.controller.ConfirmarPedidoController">
+   <children>
+      <Text layoutX="39.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resumen del pedido" />
+      <Text fx:id="datosCliente" layoutX="48.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="crearPedidoFinal_btn" layoutX="207.0" layoutY="321.0" mnemonicParsing="false" text="Crear pedido" />
+      <TextArea fx:id="listaProductos" editable="false" layoutX="48.0" layoutY="219.0" prefHeight="58.0" prefWidth="404.0" />
+      <Text layoutX="48.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos del usuario:" />
+      <Text layoutX="48.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos:" />
+   </children>
+</AnchorPane>

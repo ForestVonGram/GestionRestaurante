@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniquindio.gestioninformacionrestaurante.controller.PedidoCreadoController">
+   <children>
+      <Text layoutX="186.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedido creado con éxtio" />
+      <Button fx:id="crearOtroPedido_btn" layoutX="65.0" layoutY="187.0" mnemonicParsing="false" text="Crear otro pedido" />
+      <Button fx:id="salir_btn" layoutX="322.0" layoutY="187.0" mnemonicParsing="false" text="Salir del programa" />
+   </children>
+</AnchorPane>
